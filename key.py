@@ -104,7 +104,11 @@ def input_tokens(limit=2):
             return tokens
 
 
-if __name__ == '__main__':
+def get_n(key: str):
+    return CryptoPlus.loads(key).public_key.n
+
+
+def main():
     rsa_n = None
     tokens = input_tokens(2)
     while True:
@@ -126,3 +130,7 @@ if __name__ == '__main__':
             print('ERROR: need more tokens')
             tokens = input_tokens(1)
             continue
+
+
+if __name__ == '__main__':
+    main()
