@@ -117,7 +117,9 @@ if __name__ == '__main__':
         key = CryptoPlus.construct_rsa(n=int(n)).dumps()[1].decode()
         try:
             check(tokens, key)
-            print('公钥：')
+            print("n: ")
+            print(n)
+            print('公钥: ')
             print(key)
             break
         except:
